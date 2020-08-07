@@ -22,8 +22,13 @@ bool GameMain::Initialize()
 /// </summary>
 void GameMain::Finalize()
 {
-	// TODO: Add your finalization logic here
 
+	KeyboardBuffer key = Keyboard->GetBuffer();
+	// TODO: Add your finalization logic here
+	if (key.IsPressed(Keys_Return)) {
+		return GAME_SCENE(new ResultScene);
+		
+	}
 }
 
 /// <summary>
