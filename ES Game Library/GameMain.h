@@ -57,6 +57,12 @@ private:
 private:
 	// •Ï”éŒ¾
 
+	SPRITE player;
+	SPRITE map;
+
+	float player_x, player_y;
+	float player_spd;
+	
 
 	// ŠÖ”éŒ¾
 
