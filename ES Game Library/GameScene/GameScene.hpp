@@ -82,4 +82,4 @@ private:
 //------------------------------------------------------------------------------
 #include "../GameMain.h"
 #include "title.hpp"
-#include "GameScene.hpp"
+#include "Result.hpp"
