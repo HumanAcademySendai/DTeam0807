@@ -3,14 +3,14 @@
 #include "GameScene.hpp"
 #include "../ESGLib.h"
 
-class TemplateScene : public CGameScene {
+class ResultScene : public CGameScene {
 public:
-	TemplateScene()
+	ResultScene()
 	{
 //		ContentRootDirectory(_T("Content"));
 	}
 
-	virtual ~TemplateScene()
+	virtual ~ResultScene()
 	{
 		Finalize();
 
@@ -54,7 +54,7 @@ private:
 
 private:
 	// 変数宣言
-
+	SPRITE end;
 
 	// 関数プロトタイプ
 

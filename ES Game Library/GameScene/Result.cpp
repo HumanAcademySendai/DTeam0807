@@ -1,5 +1,5 @@
 #include "../StdAfx.h"
-#include "TemplateScene.hpp"
+#include "Result.hpp"
 
 /// <summary>
 /// Allows the game to perform any initialization it needs to before starting to run.
@@ -7,10 +7,10 @@
 /// related content.  Calling base.Initialize will enumerate through any components
 /// and initialize them as well.
 /// </summary>
-bool TemplateScene::Initialize()
+bool ResultScene::Initialize()
 {
 	// TODO: Add your initialization logic here
-
+	end = GraphicsDevice.CreateSpriteFromFile(_T("end.png"));
 
 	return true;
 }
@@ -19,7 +19,7 @@ bool TemplateScene::Initialize()
 /// Finalize will be called once per game and is the place to release
 /// all resource.
 /// </summary>
-void TemplateScene::Finalize()
+void ResultScene::Finalize()
 {
 	// TODO: Add your finalization logic here
 
@@ -32,7 +32,7 @@ void TemplateScene::Finalize()
 /// <returns>
 /// Scene continued value.
 /// </returns>
-int TemplateScene::Update()
+int ResultScene::Update()
 {
     // TODO: Add your update logic here
 
@@ -43,13 +43,16 @@ int TemplateScene::Update()
 /// <summary>
 /// This is called when the game should draw itself.
 /// </summary>
-void TemplateScene::Draw()
+void ResultScene::Draw()
 {
 	// TODO: Add your drawing code here
 	GraphicsDevice.Clear(Color_CornflowerBlue);
 
 	GraphicsDevice.BeginScene();
+	SpriteBatch.Begin();
 
+	SpriteBatch.Draw(*end, Vector3(0, 0, 0));
+	SpriteBatch.End();
 
 	GraphicsDevice.EndScene();
 }
